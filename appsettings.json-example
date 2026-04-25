@@ -1,0 +1,119 @@
+{
+    "app": {
+        "name": "My Test App",
+        "description": "App constructed through PSharp evolution.",
+        "version": 1,
+        "init": {
+            "provide": [
+                "PSharp\\Log\\LogProvider",
+                "PSharp\\Auth\\AuthProvider",
+                "PSharp\\DB\\DatabaseProvider",
+                "PSharp\\View\\ViewProvider"
+            ],
+            "middleware": [
+                "PSharp\\Auth\\Middleware\\AuthenticatesRequests"
+            ]
+        }
+    },
+    "db": {
+        "connections": {
+            "default": "my-app",
+            "my-app": {
+                "dsn": "",
+                "type": "sqlsrv",
+                "server": "",
+                "database": "",
+                "username": "",
+                "password": ""
+            }
+        }
+    },
+    "auth": {
+        "default": {
+            "repository": "file"
+        },
+        "guards": [
+            "user"
+        ],
+        "repositories": {
+            "db": {
+                "driver": "database",
+                "connection": "my-app",
+                "table": "users",
+                "fields": {
+                    "username": "username"
+                }
+            },
+            "orm": {
+                "driver": "noelle",
+                "model": "App\\Models\\User"
+            },
+            "file": {
+                "driver": "file",
+                "path": "storage/app/users.txt"
+            },
+            "ldap": {
+                "driver": "ldap"
+            }
+        },
+        "drivers": {
+            "ldap": {
+                "type": "ldap",
+                "server": "",
+                "root": "",
+                "admin": {
+                    "user": "",
+                    "passwsord": ""
+                }
+            }
+        }
+    },
+    "logging": {
+        "defaultChannel": "stack",
+        "defaultLevel": "debug",
+        "channels": {
+            "stack": {
+                "type": "stack",
+                "channels": ["daily","single"]
+            },
+            "single": {
+                "type": "file",
+                "class": "PSharp\\Log\\FileLogger",
+                "folder": "storage/logs",
+                "filename": "log.txt",
+                "label": "[{datetime}] [{level}] {error} {context}",
+                "date": "Y-m-d",
+                "datetime": "Y-m-d H:i:s.u"
+            },
+            "daily": {
+                "type": "file",
+                "class": "PSharp\\Log\\FileLogger",
+                "folder": "storage/logs",
+                "filename": "log-{date}.txt",
+                "label": "[{datetime}] [{level}] {error} {context}",
+                "date": "Y-m-d",
+                "datetime": "Y-m-d H:i:s.u"
+            },
+            "email": {
+                "type": "email",
+                "class": "PSharp\\Log\\MailLogger",
+                "from": "webmaster@localhost",
+                "to": "alarido.su@gmail.com",
+                "cc": ["alarido.su@gmail.com"],
+                "bcc": [],
+                "subject": "[{level}] [{datetime}] An error occurred right now!",
+                "body": "{hr}\nError Report\n{hr}\nTime: {datetime}\nLevel: {level}\nDescription: {error}\n{hr}\n{context}\n{hr}\n",
+                "date": "Y-m-d",
+                "datetime": "Y-m-d H:i:s.u"
+            }
+        }
+    },
+    "view": {
+        "default": "vis",
+        "vis": {
+            "compiler": "PSharp\\View\\Compilers\\VisCompiler",
+            "source": "resources/views",
+            "cache": "storage/framework/views"
+        }
+    }
+}
