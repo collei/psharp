@@ -9,15 +9,17 @@ use PSharp\Http\Methods\{HttpGet, HttpPost};
 #[Route('/')]
 class IndexController extends ControllerBase
 {
-	#[HttpGet(name: 'home')]
+	#[HttpGet]
 	public function home()
 	{
-		view('index');
+		return view('index');
 	}
 
-	#[HttpPost(path: 'hello')]
+	#[HttpGet('hello')]
 	public function helloWorld()
 	{
-		view('hello');
+		$hello = 'Hello, world!';
+
+		return view('index', compact('hello'));
 	}
 }
