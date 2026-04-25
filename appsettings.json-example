@@ -15,6 +15,15 @@
             ]
         }
     },
+    "session": {
+        "driver": "cookie",
+        "name": "psharp_session",
+        "path": "/",
+        "domain": null,
+        "secure": false,
+        "http_only": true,
+        "same_site": null
+    },
     "db": {
         "connections": {
             "default": "my-app",
@@ -30,10 +39,14 @@
     },
     "auth": {
         "default": {
-            "repository": "file"
+            "repository": "db",
+            "guest": "guest",
+            "guard": "guest"
         },
         "guards": [
-            "user"
+            "guest",
+            "user",
+            "admin"
         ],
         "repositories": {
             "db": {
@@ -41,7 +54,10 @@
                 "connection": "my-app",
                 "table": "users",
                 "fields": {
-                    "username": "username"
+                    "id": "user_id",
+                    "username": "uname",
+                    "password": "pwd",
+                    "token": "token"
                 }
             },
             "orm": {
@@ -52,19 +68,32 @@
                 "driver": "file",
                 "path": "storage/app/users.txt"
             },
+            "session": {
+                "driver": "session"
+            },
             "ldap": {
-                "driver": "ldap"
+                "driver": "ldap",
+                "server": "",
+                "root": "",
+                "admin": null
             }
         },
         "drivers": {
+            "file": {
+                "repository": "PSharp\\Auth\\Repositories\\FileRepository",
+                "user": "PSharp\\Auth\\Repositories\\User"
+            },
+            "session": {
+                "repository": "PSharp\\Auth\\Repositories\\SessionRepository",
+                "user": "PSharp\\Auth\\Repositories\\User"
+            },
+            "database": {
+                "repository": "PSharp\\Auth\\Repositories\\DatabaseRepository",
+                "user": "PSharp\\Auth\\Repositories\\User"
+            },
             "ldap": {
-                "type": "ldap",
-                "server": "",
-                "root": "",
-                "admin": {
-                    "user": "",
-                    "passwsord": ""
-                }
+                "repository": "PSharp\\Auth\\Repositories\\LdapRepository",
+                "user": "PSharp\\Auth\\Repositories\\User"
             }
         }
     },
