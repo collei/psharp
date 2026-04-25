@@ -1,11 +1,11 @@
 {
-    "name": "collei/psharp-skeleton",
+    "name": "collei/psharp",
     "description": "Another PHP microframework for webapps",
     "type": "project",
     "license": "MIT",
     "require": {
         "php": "^8.0",
-        "collei/psharp": "^0.0"
+        "collei/psharp-framework": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -21,6 +21,7 @@
     "scripts": {
         "setup": [
             "composer install",
+            "composer dump-autoload --optimize",
             "@php -r \"file_exists('appsettings.json') || copy('appsettings.json-example', 'appsettings.json');\"",
             "npm install --ignore-scripts",
             "npm run build"
@@ -30,15 +31,6 @@
         ],
         "test": [
             ""
-        ],
-        "post-autoload-dump": [
-            ""
-        ],
-        "post-update-cmd": [
-            ""
-        ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('appsettings.json') || copy('appsettings.json-example', 'appsettings.json');\""
         ],
         "post-create-project-cmd": [
             ""
