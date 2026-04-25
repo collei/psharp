@@ -33,10 +33,8 @@
             ""
         ],
         "post-create-project-cmd": [
-            ""
-        ],
-        "pre-package-uninstall": [
-            ""
+            "composer dump-autoload --optimize",
+            "@php -r \"file_exists('appsettings.json') || copy('appsettings.json-example', 'appsettings.json');\""
         ]
     },
     "extra": {
