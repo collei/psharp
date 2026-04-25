@@ -25,12 +25,7 @@
 @section('contents')
     <span class="hello">For the sons of men, and the gals of women, hello, world !</span>
 
-    <p>{{ $result }}</p>
+    <p>{{ $hello ?? 'You are in the Home page' }}</p>
 
     <div id="message"></div>
-
-    <fieldset>
-        <legend>Dumps</legend>
-        <pre>{{ $dumps }}</pre>
-    </fieldset>
 @endsection
