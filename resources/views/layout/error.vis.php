@@ -6,6 +6,7 @@
 body {
 	font-family: Calibri, Verdana, Arial;
 	font-size: 14px;
+	overflow-x: hidden !important;
 }
 div.trace-items {
 	padding-left: 50px;
@@ -44,41 +45,46 @@ div.headr > div:last-child {
 		<div>
 			<h1>Exception !</h1>
 		</div>
-		<div>
+		<div class="px-1 text-danger">
 			<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
                 <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"/>
                 <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
             </svg>
 		</div>
 	</div>
-	<div>
-		<b>Message:</b>
-		<span>{{ $exception['message'] }}</span>
-	</div>
-	<div>
-		<b>Exception:</b>
-		<span>{{ $exception['exception'] ?? 'Unspecified' }}</span>
-	</div>
-	<div>
-		<b>File (line):</b>
-		<span>{{ $exception['file'] ?? 'none' }}&nbsp;({{ $exception['line'] ?? 0 }})</span>
-	</div>
-	<div>
-		<b>Stack Trace:</b>
-	</div>
-	<div class="trace-items">
-		@foreach ($exception['trace'] as $item)
-		<div class="trace-item">
-			<div>
-				<b>File (line):</b>
-				<span>{{ $item['file'] ?? 'none' }}&nbsp;({{ $item['line'] ?? 0 }})</span>
-			</div>
-			<div>
-				<b>Function:</b>
-				<span>{{ $item['function'] ?? 'Unspecified' }}</span>
-			</div>
+	<div class="row px-3">
+		<div class="col-11">
+			<b>Message:</b> <b class="text-danger">{{ $exception['message'] }}</b>
 		</div>
-		@endforeach
+	</div>
+	<div class="row px-3">
+		<div class="col-11">
+			<b>Exception:</b> <b class="text-danger">{{ $exception['exception'] ?? 'Unspecified' }}</b>
+		</div>
+	</div>
+	<div class="row px-3">
+		<div class="col-11">
+			<b>File (line):</b> <b class="text-danger">{{ $exception['file'] ?? 'none' }}&nbsp;({{ $exception['line'] ?? 0 }})</b>
+		</div>
+	</div>
+	<div class="row px-3">
+		<div class="col-11">
+			<b>Stack Trace:</b>
+		</div>
+		<div class="col-11 trace-items">
+	@foreach ($exception['trace'] as $item)
+			<div class="row trace-item">
+				<div>
+					<b>File (line):</b>
+					<span>{{ $item['file'] ?? 'none' }}&nbsp;({{ $item['line'] ?? 0 }})</span>
+				</div>
+				<div>
+					<b>Function:</b>
+					<span>{{ $item['function'] ?? 'Unspecified' }}</span>
+				</div>
+			</div>
+	@endforeach
+		</div>
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
