@@ -28,6 +28,8 @@ class IndexController extends ControllerBase
 	#[NotFound]
 	public function notFound()
 	{
-		return view('layout.not-found');
+		$url = $request->getURI()->toString();
+
+		return view('layout.not-found', compact('url'));
 	}
 }
