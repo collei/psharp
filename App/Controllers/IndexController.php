@@ -26,7 +26,7 @@ class IndexController extends ControllerBase
 
 	#[HttpGet('not-found')]
 	#[NotFound]
-	public function notFound()
+	public function notFound(Request $request)
 	{
 		$url = $request->getURI()->toString();
 
