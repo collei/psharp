@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use PSharp\Http\Route;
+use PSharp\Http\NotFound;
 use PSharp\Http\Actions\ControllerBase;
 use PSharp\Http\Methods\{HttpGet, HttpPost};
 
@@ -21,5 +22,12 @@ class IndexController extends ControllerBase
 		$hello = 'Hello, world!';
 
 		return view('index', compact('hello'));
+	}
+
+	#[HttpGet('not-found')]
+	#[NotFound]
+	public function notFound()
+	{
+		return view('layout.not-found');
 	}
 }
