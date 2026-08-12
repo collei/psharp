@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f52f65047acd3204e97b65c76bc3365",
+    "content-hash": "c23c09956b3c499e7ff7dbc5127a311f",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -76,17 +76,65 @@
             "time": "2023-12-11T17:09:12+00:00"
         },
         {
-            "name": "collei/psharp-framework",
-            "version": "v1.0.3",
+            "name": "collei/collection",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/collei/psharp-framework.git",
-                "reference": "48ab7e64266e4017aab642100dddaf75ad33e92e"
+                "url": "https://github.com/collei/collection.git",
+                "reference": "bf5844cd9a9c3b997883fe060542a4083a7fcadf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/collei/psharp-framework/zipball/48ab7e64266e4017aab642100dddaf75ad33e92e",
-                "reference": "48ab7e64266e4017aab642100dddaf75ad33e92e",
+                "url": "https://api.github.com/repos/collei/collection/zipball/bf5844cd9a9c3b997883fe060542a4083a7fcadf",
+                "reference": "bf5844cd9a9c3b997883fe060542a4083a7fcadf",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "^7.0 || ^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php",
+                    "src/polyfills.php"
+                ],
+                "psr-4": {
+                    "Collei\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Al Ju",
+                    "email": "alarido.su@gmail.com"
+                }
+            ],
+            "description": "a Laravel-inspired Collection class, based upon internal PHP functions and itselves.",
+            "keywords": [
+                "collection"
+            ],
+            "support": {
+                "issues": "https://github.com/collei/collection/issues",
+                "source": "https://github.com/collei/collection/tree/v1.0.0"
+            },
+            "time": "2026-05-30T18:07:41+00:00"
+        },
+        {
+            "name": "collei/psharp-framework",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/collei/psharp-framework.git",
+                "reference": "12599180d1705a3bf5160ed93667ed23d6372410"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/collei/psharp-framework/zipball/12599180d1705a3bf5160ed93667ed23d6372410",
+                "reference": "12599180d1705a3bf5160ed93667ed23d6372410",
                 "shasum": ""
             },
             "require": {
@@ -125,9 +173,52 @@
             ],
             "support": {
                 "issues": "https://github.com/collei/psharp-framework/issues",
-                "source": "https://github.com/collei/psharp-framework/tree/v1.0.3"
+                "source": "https://github.com/collei/psharp-framework/tree/v1.1.0"
             },
-            "time": "2026-04-25T19:08:52+00:00"
+            "time": "2026-08-12T22:12:20+00:00"
+        },
+        {
+            "name": "collei/rovi",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/collei/rovi.git",
+                "reference": "467b9f643bfb76f320ca7743de5a811c8ddff45a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/collei/rovi/zipball/467b9f643bfb76f320ca7743de5a811c8ddff45a",
+                "reference": "467b9f643bfb76f320ca7743de5a811c8ddff45a",
+                "shasum": ""
+            },
+            "require": {
+                "collei/collection": "^1.0",
+                "php": "^8.0",
+                "psr/log": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rovi\\": "src/Rovi/",
+                    "Models\\": "Models/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Al Ju",
+                    "email": "alarido.su@gmail.com"
+                }
+            ],
+            "description": "Independent query builder for PHP",
+            "support": {
+                "issues": "https://github.com/collei/rovi/issues",
+                "source": "https://github.com/collei/rovi/tree/v1.1.1"
+            },
+            "time": "2026-08-12T21:58:51+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -548,16 +639,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.36.0",
+            "version": "v1.38.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "6a21eb99c6973357967f6ce3708cd55a6bec6315"
+                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/6a21eb99c6973357967f6ce3708cd55a6bec6315",
-                "reference": "6a21eb99c6973357967f6ce3708cd55a6bec6315",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
+                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
                 "shasum": ""
             },
             "require": {
@@ -609,7 +700,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.36.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.38.2"
             },
             "funding": [
                 {
@@ -629,11 +720,11 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-04-10T17:25:58+00:00"
+            "time": "2026-05-27T06:59:30+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.36.0",
+            "version": "v1.37.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -693,7 +784,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.36.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.37.0"
             },
             "funding": [
                 {
