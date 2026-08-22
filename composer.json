@@ -5,8 +5,8 @@
     "license": "MIT",
     "require": {
         "php": "^8.0",
-        "collei/psharp-framework": "^1.0",
-        "collei/rovi": "^1.0.0"
+        "collei/psharp-framework": "^1.2",
+        "collei/rovi": "^1.1"
     },
     "autoload": {
         "psr-4": {
