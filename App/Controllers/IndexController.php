@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use PSharp\Http\Route;
+use PSharp\Http\Request;
 use PSharp\Http\NotFound;
 use PSharp\Http\Actions\ControllerBase;
 use PSharp\Http\Methods\{HttpGet, HttpPost};
