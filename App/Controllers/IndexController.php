@@ -25,6 +25,14 @@ class IndexController extends ControllerBase
 		return view('index', compact('hello'));
 	}
 
+	#[HttpGet('search/{type}')]
+	public function search(string $type = '1')
+	{
+		$term = request()->input('q', '');
+
+		return view('search', compact('type','term'));
+	}
+
 	#[HttpGet('not-found')]
 	#[NotFound]
 	public function notFound(Request $request)
