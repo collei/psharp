@@ -125,16 +125,16 @@
         },
         {
             "name": "collei/psharp-framework",
-            "version": "v1.2.3",
+            "version": "v1.2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/collei/psharp-framework.git",
-                "reference": "3f70c8d9d55d031fbbc05233d1138344ef9f2a41"
+                "reference": "f408cfbf5d689a6e6a001ce2bbbeefffd2e5a29f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/collei/psharp-framework/zipball/3f70c8d9d55d031fbbc05233d1138344ef9f2a41",
-                "reference": "3f70c8d9d55d031fbbc05233d1138344ef9f2a41",
+                "url": "https://api.github.com/repos/collei/psharp-framework/zipball/f408cfbf5d689a6e6a001ce2bbbeefffd2e5a29f",
+                "reference": "f408cfbf5d689a6e6a001ce2bbbeefffd2e5a29f",
                 "shasum": ""
             },
             "require": {
@@ -173,22 +173,22 @@
             ],
             "support": {
                 "issues": "https://github.com/collei/psharp-framework/issues",
-                "source": "https://github.com/collei/psharp-framework/tree/v1.2.3"
+                "source": "https://github.com/collei/psharp-framework/tree/v1.2.5.1"
             },
-            "time": "2026-10-08T00:10:09+00:00"
+            "time": "2026-10-18T14:33:08+00:00"
         },
         {
             "name": "collei/rovi",
-            "version": "v1.1.4.1",
+            "version": "v1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/collei/rovi.git",
-                "reference": "aef26628275c85620d9d91bdbe982c55f7bf1588"
+                "reference": "dea1e833c1f473df9af00111d48ebffffaca7668"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/collei/rovi/zipball/aef26628275c85620d9d91bdbe982c55f7bf1588",
-                "reference": "aef26628275c85620d9d91bdbe982c55f7bf1588",
+                "url": "https://api.github.com/repos/collei/rovi/zipball/dea1e833c1f473df9af00111d48ebffffaca7668",
+                "reference": "dea1e833c1f473df9af00111d48ebffffaca7668",
                 "shasum": ""
             },
             "require": {
@@ -199,7 +199,8 @@
             "type": "library",
             "autoload": {
                 "files": [
-                    "src/helpers.php"
+                    "src/helpers.php",
+                    "src/rovi-facade.php"
                 ],
                 "psr-4": {
                     "Rovi\\": "src/Rovi/",
@@ -219,9 +220,9 @@
             "description": "Independent query builder for PHP",
             "support": {
                 "issues": "https://github.com/collei/rovi/issues",
-                "source": "https://github.com/collei/rovi/tree/v1.1.4.1"
+                "source": "https://github.com/collei/rovi/tree/v1.1.7"
             },
-            "time": "2026-10-09T00:08:02+00:00"
+            "time": "2026-10-14T23:56:53+00:00"
         },
         {
             "name": "nesbot/carbon",
