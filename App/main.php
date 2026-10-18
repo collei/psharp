@@ -11,7 +11,8 @@ $app = new PSharp\Core\Application(dirname(__DIR__));
 $app->provide(PSharp\Log\LogProvider::class)
 	->provide(PSharp\Auth\AuthProvider::class)
 	->provide(PSharp\DB\DatabaseProvider::class)
-	->provide(PSharp\View\ViewProvider::class);
+	->provide(PSharp\View\ViewProvider::class)
+	->provideIfExists(Rovi\Providers\PSharp\RoviProvider::class);
 
 /**
  * let's map controllers and routes
