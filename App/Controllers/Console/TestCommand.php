@@ -5,13 +5,22 @@ use PSharp\Console\CommandBase;
 use PSharp\Console\CommandLine;
 use PSharp\Console\Signature;
 
-#[Signature('test {topic} {subtopic?}')]
+/**
+ * Test command.
+ */
+#[Signature('test {what?}')]
 class TestCommand extends CommandBase
 {
+	/**
+	 * Command handler.
+	 * 
+	 * @param PSharp\Console\CommandLine $input
+	 * @return mixed
+	 */
 	public function handle(CommandLine $input)
 	{
-		$passos = 'This is a test.';
+		$this->writeLine('<fg=green>This is a test.</>');
 
-		echo($passos);
+		return 0;
 	}
 }
