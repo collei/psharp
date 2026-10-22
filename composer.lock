@@ -125,16 +125,16 @@
         },
         {
             "name": "collei/psharp-framework",
-            "version": "v1.2.5.1",
+            "version": "v1.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/collei/psharp-framework.git",
-                "reference": "f408cfbf5d689a6e6a001ce2bbbeefffd2e5a29f"
+                "reference": "112f845f55d04a67ef46e062523b65e561b733b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/collei/psharp-framework/zipball/f408cfbf5d689a6e6a001ce2bbbeefffd2e5a29f",
-                "reference": "f408cfbf5d689a6e6a001ce2bbbeefffd2e5a29f",
+                "url": "https://api.github.com/repos/collei/psharp-framework/zipball/112f845f55d04a67ef46e062523b65e561b733b2",
+                "reference": "112f845f55d04a67ef46e062523b65e561b733b2",
                 "shasum": ""
             },
             "require": {
@@ -173,9 +173,9 @@
             ],
             "support": {
                 "issues": "https://github.com/collei/psharp-framework/issues",
-                "source": "https://github.com/collei/psharp-framework/tree/v1.2.5.1"
+                "source": "https://github.com/collei/psharp-framework/tree/v1.2.7"
             },
-            "time": "2026-10-18T14:33:08+00:00"
+            "time": "2026-10-22T22:00:26+00:00"
         },
         {
             "name": "collei/rovi",
