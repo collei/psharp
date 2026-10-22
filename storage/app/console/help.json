@@ -1,0 +1,40 @@
+{
+    "file": "help.json",
+    "date": "2026-10-21T18:15:49Z",
+    "topics": [
+        {
+            "name": "help",
+            "title": "Help Display",
+            "description": "Command to display help on console according to user requests.",
+            "content": [
+                {
+                    "section": "start",
+                    "heading": "How to use help options",
+                    "text": [
+                        "type <fg=yellow>cl help</> (without more) to list available topics.",
+                        "type <fg=yellow>cl help [topic] [subtopic]</> to see the help.",
+                        "Not all topics have subtopics - for these cases, subtopic will be simply ignored causing no error."
+                    ]
+                },
+                {
+                    "section": "middle",
+                    "heading": "How to use help options",
+                    "text": [
+                        "type <fg=yellow>cl help</> (without more) to list available topics.",
+                        "type <fg=yellow>cl help [topic] [subtopic]</> to see the help.",
+                        "Not all topics have subtopics - for these cases, subtopic will be simply ignored causing no error."
+                    ]
+                },
+                {
+                    "section": "end",
+                    "heading": "How to use help options",
+                    "text": [
+                        "type <fg=yellow>cl help</> (without more) to list available topics.",
+                        "type <fg=yellow>cl help [topic] [subtopic]</> to see the help.",
+                        "Not all topics have subtopics - for these cases, subtopic will be simply ignored causing no error."
+                    ]
+                }
+            ]
+        }
+    ]
+}
