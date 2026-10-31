@@ -1,37 +1,84 @@
 {
     "file": "help.json",
     "date": "2026-10-21T18:15:49Z",
-    "topics": [
+    "pages": [
         {
             "name": "help",
             "title": "Help Display",
             "description": "Command to display help on console according to user requests.",
             "content": [
                 {
-                    "section": "start",
-                    "heading": "How to use help options",
+                    "section": "body",
+                    "heading": "Options",
                     "text": [
-                        "type <fg=yellow>cl help</> (without more) to list available topics.",
-                        "type <fg=yellow>cl help [topic] [subtopic]</> to see the help.",
-                        "Not all topics have subtopics - for these cases, subtopic will be simply ignored causing no error."
+                        "* <fg=green>help</>",
+                        [
+                            "List all available help topics."
+                        ],
+                        "* <fg=green>help {topic}</>",
+                        [
+                            "Show the help topic."
+                        ],
+                        "* <fg=green>help {topic} {subtopic}</>",
+                        [
+                            "Show the specific subtopic of the help topic."
+                        ]
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "name": "list",
+            "title": "List Command",
+            "description": "Command to display a list of available commands.",
+            "content": [
                 {
-                    "section": "middle",
-                    "heading": "How to use help options",
+                    "section": "body",
+                    "heading": "Options",
                     "text": [
-                        "type <fg=yellow>cl help</> (without more) to list available topics.",
-                        "type <fg=yellow>cl help [topic] [subtopic]</> to see the help.",
-                        "Not all topics have subtopics - for these cases, subtopic will be simply ignored causing no error."
+                        "* <fg=green>list</>",
+                        [
+                            "List all available commands."
+                        ],
+                        "* <fg=green>list {spec}</>",
+                        [
+                            "List all available commands starting with the given (one or more) characters in the <fg=green>{spec}</> parameter."
+                        ]
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "name": "debug",
+            "title": "Debug Command",
+            "description": "Command to display debug information on the parameters.",
+            "content": [
                 {
-                    "section": "end",
-                    "heading": "How to use help options",
+                    "section": "body",
+                    "heading": "Options",
                     "text": [
-                        "type <fg=yellow>cl help</> (without more) to list available topics.",
-                        "type <fg=yellow>cl help [topic] [subtopic]</> to see the help.",
-                        "Not all topics have subtopics - for these cases, subtopic will be simply ignored causing no error."
+                        "* <fg=green>debug {first?} {second?} {third?}</>",
+                        [
+                            "List debug info about the first three positional parameters (if given) and every excess parameters and options."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "route-list",
+            "title": "Route listing command",
+            "description": "Command to display a list of declared routes on controllers.",
+            "content": [
+                {
+                    "section": "body",
+                    "heading": "Options",
+                    "text": [
+                        "* <fg=green>route-list -D</>",
+                        "* <fg=green>route-list --detailed</>",
+                        [
+                            "List route info."
+                        ]
                     ]
                 }
             ]
