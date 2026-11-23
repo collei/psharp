@@ -1,0 +1,38 @@
+<?php
+namespace @{namespace};
+
+use PSharp\Http\{Route, Router, Request, NotFound};
+use PSharp\Http\Actions\ControllerBase;
+use PSharp\Http\Methods\{HttpGet, HttpPost};
+
+#[ApiController]
+#[Route('/')]
+class @{name} extends ControllerBase
+{
+	#[HttpGet]
+	public function home()
+	{
+		return view('index');
+	}
+
+	#[HttpGet('hello')]
+	public function helloWorld()
+	{
+		$hello = 'Hello, world!';
+
+		return view('index', compact('hello'));
+	}
+
+	#[HttpGet('not-found')]
+	#[NotFound]
+	public function notFound(Request $request)
+	{
+		$url = $request->getURI()->toString();
+		$app = app();
+		$container = app()->container();
+
+		$rovi = $container->get('Rovi\RoviManager');
+
+		return view('layout.not-found', compact('url','rovi','app','container'));
+	}
+}

@@ -1,0 +1,20 @@
+<?php
+namespace @{namespace};
+
+use PSharp\Console\{CommandBase, CommandLine, Signature};
+use PSharp\Support\Str;
+
+#[Signature('your-command-name {arg1} {arg2} {--opt1}')]
+class @{name} extends CommandBase
+{
+	/**
+	 * Command handler.
+	 * 
+	 * @param PSharp\Console\CommandLine $input
+	 * @return mixed
+	 */
+	public function handle(CommandLine $input, $arg1, $arg2, $opt1 = null)
+	{
+        // start writing your command logic here //
+    }
+}

@@ -18,7 +18,7 @@ $app->provide(PSharp\Log\LogProvider::class)
  * let's map controllers and routes
  */
 $app->mapControllers('App\Controllers')
-	->mapConsoleCommands('App\Controllers\Console');
+	->mapConsoleCommands('App\Console');
 
 /**
  * let's add middleware

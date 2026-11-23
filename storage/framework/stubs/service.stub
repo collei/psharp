@@ -1,0 +1,20 @@
+<?php
+namespace @{namespace};
+
+/**
+ * Tarefas com notas de corretagem.
+ */
+class @{name}
+{
+    use DateUtils;
+
+    /**
+     * Listar notas.
+     * 
+     * @return array
+     */
+    public function listar()
+    {
+        return Nota::all();
+    }
+}

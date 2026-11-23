@@ -1,0 +1,19 @@
+<?php
+namespace @{namespace};
+
+use Rovi\Repository\Model;
+
+/**
+ * 
+ */
+class {name} extends Model
+{
+    protected const CONNECTION = 'calculinvest';
+	protected const TABLE = 'your-table';
+	protected const ID = 'operacoes';
+
+	public function tipo()
+	{
+		return $this->belongsTo(AtivoTipo::class, 'tipo_ativo_id');
+	}
+}

@@ -1,5 +1,5 @@
 <?php
-namespace App\Controllers\Console;
+namespace App\Console;
 
 use PSharp\Console\CommandBase;
 use PSharp\Console\CommandLine;
